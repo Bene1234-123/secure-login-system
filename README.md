@@ -1,16 +1,38 @@
-# React + Vite
+# Secure Login System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project demonstrates a secure authentication flow built with React, Vite, and Supabase Auth. It includes:
 
-Currently, two official plugins are available:
+- email/password sign-up and sign-in
+- MFA/TOTP setup and verification
+- role-based access checks for the admin dashboard
+- a password-hashing demo using bcrypt with a server-side pepper
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Local setup
 
-## React Compiler
+1. Copy [.env.example](.env.example) to a real `.env` file in the project root.
+2. Add the required Supabase values for the frontend app:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_PUBLISHABLE_KEY`
+3. Set a strong `PEPPER` value for the password demo API. It must be at least 32 characters long.
+4. Start the app with `npm install` and `npm run dev`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Required environment variables
 
-## Expanding the ESLint configuration
+```env
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=your-anon-key
+PEPPER=replace-with-a-long-random-secret-at-least-32-characters
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Keep `.env` out of version control. The project uses a local `.env` file during development and deployment setup.
+
+## Verification
+
+Run the validation checks before deployment:
+
+```bash
+npm run build
+npm run test:password-demo
+```
+
+The smoke test loads the local `.env` file automatically so it does not fail when a project is run from a fresh clone.

@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#010711"/>
+      <stop offset=".52" stop-color="#06182b"/>
+      <stop offset="1" stop-color="#020812"/>
+    </linearGradient>
+    <radialGradient id="blueGlow">
+      <stop stop-color="#0879ff" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#0879ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="globeFill">
+      <stop stop-color="#0d5ca7" stop-opacity=".58"/>
+      <stop offset=".72" stop-color="#06203b" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#020914" stop-opacity=".98"/>
+    </radialGradient>
+    <linearGradient id="screen" x2="0" y2="1">
+      <stop stop-color="#091b30"/>
+      <stop offset="1" stop-color="#020813"/>
+    </linearGradient>
+    <pattern id="code" width="82" height="34" patternUnits="userSpaceOnUse">
+      <path d="M3 8h25m8 0h39M3 17h13m8 0h51M3 26h38m8 0h27" stroke="#168eff" stroke-opacity=".44" stroke-width="2"/>
+      <circle cx="76" cy="8" r="1.5" fill="#50cfff" fill-opacity=".75"/>
+    </pattern>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0v30" stroke="#2b9cff" stroke-opacity=".2"/>
+    </pattern>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="globeClip"><circle cx="1320" cy="405" r="276"/></clipPath>
+    <linearGradient id="floor" x2="0" y2="1">
+      <stop stop-color="#07528b" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#01050c" stop-opacity=".82"/>
+    </linearGradient>
+  </defs>
+
+  <path fill="url(#bg)" d="M0 0h1600v1000H0z"/>
+  <ellipse cx="1310" cy="410" rx="470" ry="450" fill="url(#blueGlow)"/>
+  <ellipse cx="170" cy="520" rx="420" ry="440" fill="url(#blueGlow)" opacity=".56"/>
+
+  <g opacity=".58" fill="#147bdb" font-family="monospace" font-size="17">
+    <text x="875" y="78">01001010  10100101  01101001  10011010</text>
+    <text x="930" y="111">10110100  00101101  11001010  01010110</text>
+    <text x="1190" y="93">01001101  10110010  01101001</text>
+  </g>
+
+  <g opacity=".75">
+    <path d="M0 83h237v282H0z" fill="url(#screen)" stroke="#138bdf" stroke-opacity=".8" stroke-width="3"/>
+    <path d="M12 99h213v246H12z" fill="url(#code)" opacity=".84"/>
+    <path d="M0 82h240" stroke="#19c5ff" stroke-width="6" filter="url(#glow)"/>
+    <path d="M36 292h164v48H36z" fill="#04101e" stroke="#147be0" stroke-opacity=".65"/>
+    <text x="52" y="323" fill="#35baff" font-family="monospace" font-size="20" font-weight="700">ACCESS DENIED</text>
+  </g>
+
+  <g opacity=".58">
+    <path d="M263 220c25-94 111-149 188-123 44 15 71 66 68 111l-9 111-206 45-70-49z" fill="#030a14" stroke="#087cdd" stroke-width="7" filter="url(#glow)"/>
+    <path d="M287 252c32-85 98-113 151-109 40 4 67 35 67 77-36-31-74-35-110-22-41 14-64 57-88 100l-45 55z" fill="#071321"/>
+    <path d="M263 330c55-40 88-61 119-67 31-7 77-1 127 40l51 147H225z" fill="#020913"/>
+  </g>
+
+  <g opacity=".75">
+    <path d="M0 383 307 347l74 416L0 803z" fill="url(#screen)" stroke="#147bc8" stroke-width="3"/>
+    <path d="M14 400 294 369l62 363-342 30z" fill="url(#code)" opacity=".88"/>
+    <path d="m0 803 381-40 126 74-423 78z" fill="#020711" stroke="#125b96" stroke-width="3"/>
+    <path d="m58 814 272-28 67 38-284 37z" fill="#07182a" stroke="#1882cb" stroke-opacity=".6" stroke-width="2"/>
+    <path d="M0 833h1600v167H0z" fill="url(#floor)"/>
+    <path d="M0 860h1600M0 913h1600M0 961h1600" stroke="#147ac5" stroke-opacity=".2" stroke-width="2"/>
+    <path d="M170 844v156m132-169v169m188-185v185m713-178v178m182-178v178" stroke="#1385db" stroke-opacity=".13" stroke-width="2"/>
+    <path d="M0 878h370l160-25m1070 18h-440l-144-29" stroke="#21aaff" stroke-opacity=".34" stroke-width="3" filter="url(#glow)"/>
+  </g>
+
+  <g clip-path="url(#globeClip)">
+    <circle cx="1320" cy="405" r="276" fill="url(#globeFill)"/>
+    <circle cx="1320" cy="405" r="264" fill="url(#grid)" opacity=".9"/>
+    <ellipse cx="1320" cy="405" rx="115" ry="276" stroke="#26baff" stroke-opacity=".52" stroke-width="3"/>
+    <ellipse cx="1320" cy="405" rx="205" ry="276" stroke="#26baff" stroke-opacity=".38" stroke-width="2"/>
+    <ellipse cx="1320" cy="405" rx="276" ry="95" stroke="#26baff" stroke-opacity=".55" stroke-width="3"/>
+    <ellipse cx="1320" cy="405" rx="276" ry="178" stroke="#26baff" stroke-opacity=".35" stroke-width="2"/>
+    <path d="M1050 405h540M1320 130v550" stroke="#28baff" stroke-opacity=".44" stroke-width="2"/>
+    <g fill="#42d3ff" filter="url(#glow)">
+      <circle cx="1100" cy="275" r="5"/><circle cx="1165" cy="497" r="4"/>
+      <circle cx="1455" cy="265" r="5"/><circle cx="1510" cy="451" r="4"/>
+      <circle cx="1312" cy="150" r="4"/><circle cx="1377" cy="644" r="5"/>
+      <circle cx="1230" cy="332" r="4"/><circle cx="1430" cy="540" r="4"/>
+    </g>
+  </g>
+  <circle cx="1320" cy="405" r="276" stroke="#38c7ff" stroke-opacity=".8" stroke-width="4" filter="url(#glow)"/>
+
+  <g filter="url(#glow)">
+    <path d="m1320 225 116 45v87c0 105-45 164-116 207-71-43-116-102-116-207v-87z" fill="#051c32" fill-opacity=".92" stroke="#35c8ff" stroke-width="10"/>
+    <path d="m1320 250 91 35v72c0 78-32 126-91 164-59-38-91-86-91-164v-72z" fill="#06305a" fill-opacity=".72" stroke="#128fff" stroke-width="4"/>
+    <path d="M1282 371v-27a38 38 0 0 1 76 0v27m-90 0h104v91h-104z" fill="#15aaff" fill-opacity=".88" stroke="#8ceaff" stroke-width="8" stroke-linejoin="round"/>
+    <circle cx="1320" cy="404" r="11" fill="#d6f8ff"/>
+    <path d="M1320 414v22" stroke="#d6f8ff" stroke-width="9" stroke-linecap="round"/>
+  </g>
+
+  <path d="M1170 650v192" stroke="#2caeff" stroke-opacity=".8" stroke-width="2"/>
+  <g fill="#368fd4" font-family="monospace" font-size="23" letter-spacing="5">
+    <text x="1200" y="688">DETECT</text>
+    <text x="1200" y="733">PREVENT</text>
+    <text x="1200" y="778">PROTECT</text>
+    <text x="1200" y="823">SECURE</text>
+  </g>
+
+  <path fill="#010711" fill-opacity=".46" d="M0 0h1600v1000H0z"/>
+</svg>
